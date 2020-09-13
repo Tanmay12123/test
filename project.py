@@ -1,38 +1,22 @@
+# Python Program to find the L.C.M. of two input number
 
+def compute_lcm(x, y):
 
-def calculator(first_number,operators,second_number):
-    
-    print("Hello welcome to MDs calculator\n Type the operators according to your needs")
-    first_number = int(input("Enter the 1 number:  "))
-    operators = input("Enter your operator:  ")
-    second_number = int(input("Enter the 2 number: "))
-    
-    if operators == "+":
-        print(first_number+second_number)
-        
-        
-    elif operators == "-":
-        print(first_number -second_number)
-        
-    elif operators == "*":
-        print(first_number *second_number)
-        
-    elif operators == "/":
-        print(first_number /second_number)
-    
-    else:
-        print("Sorry, we don't understand this operator")
-               
-print("Thank you for using the calculator")
-user_choice =input("Please enter y/n to play again or quit:   ")
+   # choose the greater number
+   if x > y:
+       greater = x
+   else:
+       greater = y
 
-if user_choice== "y":
-    print("yes!!")
+   while(True):
+       if((greater % x == 0) and (greater % y == 0)):
+           lcm = greater
+           break
+       greater += 1
 
-elif user_choice== "n":
-    print("Goodbye!     Meet you again")
-    break
+   return lcm
 
-else:
-    print("sorry I don't understand'")
-    
+num1 = 54
+num2 = 36
+
+print("The L.C.M. is", compute_lcm(num1, num2))
