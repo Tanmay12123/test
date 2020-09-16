@@ -1,2 +1,2 @@
-from project.py import calculator
-
+x = [12,4,54,78,54,32,45,66,99]
+print(sorted(x))
